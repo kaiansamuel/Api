@@ -4,4 +4,4 @@ import { CreateRoleUseCase } from "./CreateRoleUseCase"
 
 const rolesRepository = new RolesRepository()
 const createRoleUseCase = new CreateRoleUseCase(rolesRepository)
-export const createRolesController = new CreateRoleController(CreateRoleUseCase)
+export const createRolesController = new CreateRoleController(createRoleUseCase)
