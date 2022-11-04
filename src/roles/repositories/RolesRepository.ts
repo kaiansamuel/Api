@@ -13,7 +13,7 @@ export type PaginateParams = {
   take: number
 }
 
-export type RolesPaginateProperties {
+export type RolesPaginateProperties = {
   per_page: number
   total: number
   current_page: number
@@ -65,7 +65,6 @@ export class RolesRepository {
 
   async findByName(name: string): Promise<Role | null> {
     return this.repository.findOneBy({ name })
-    return role
   }
 
   async findById(id: string): Promise<Role | null> {
